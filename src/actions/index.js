@@ -9,3 +9,7 @@ export const decrement = () => {
 export const incrementAsync = () => {
 	return { type: "INCREMENT_ASYNC" };
 };
+
+export const incrementSeialAsync = () => {
+	return { type: "INCREMENT_SERIAL_ASYNC" };
+};

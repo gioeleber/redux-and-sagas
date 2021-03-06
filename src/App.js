@@ -1,5 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, incrementAsync } from "./actions";
+import {
+	increment,
+	decrement,
+	incrementAsync,
+	incrementSeialAsync,
+} from "./actions";
 
 export default function App() {
 	const counter = useSelector((state) => state.counter);
@@ -35,6 +40,14 @@ export default function App() {
 					}}
 				>
 					Increment after 1 second
+				</button>
+				<br />
+				<button
+					onClick={() => {
+						dispatch(incrementSeialAsync());
+					}}
+				>
+					Increment queue after 1 second
 				</button>
 				<br />
 				<button onClick={onFetchButtonClick}>Saga!</button>
